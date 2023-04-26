@@ -4,15 +4,20 @@ import java.awt.event.*;
 import java.util.Random;
 
 public class GameButton extends JButton {
-    Random rand;
+    
     public GameButton(){
-        rand = new Random();
+        setBackgroundColor();
+    }
+    
+    public void setBackgroundColor(){
+        Random rand = new Random();
         int colorNumber = rand.nextInt(3);
-        if(colorNumber == 0)
+        
+        if(colorNumber == 0 )
         {
             this.setBackground(Color.red);
         }
-        else if(colorNumber == 1)
+        else if(colorNumber == 1 )
         {
             this.setBackground(Color.green);
         }
@@ -21,5 +26,6 @@ public class GameButton extends JButton {
             this.setBackground(Color.blue);
         }
     }
+
     }
 
